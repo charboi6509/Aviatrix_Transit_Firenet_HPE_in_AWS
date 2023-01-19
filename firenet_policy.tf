@@ -18,8 +18,8 @@ resource "aviatrix_transit_firenet_policy" "transit2_firenet_policy" {
 }
 resource "aviatrix_transit_firenet_policy" "transit3_firenet_policy" {
     depends_on = [
-    aviatrix_spoke_transit_attachment.spoke5-to-transit1,
-    aviatrix_spoke_transit_attachment.spoke6-to-transit1
+    aviatrix_spoke_transit_attachment.spoke5-to-transit3,
+    aviatrix_spoke_transit_attachment.spoke6-to-transit3
   ]
   transit_firenet_gateway_name = aviatrix_transit_gateway.transit3.gw_name
   inspected_resource_name      = "SPOKE:spoke5,SPOKE:spoke6"
